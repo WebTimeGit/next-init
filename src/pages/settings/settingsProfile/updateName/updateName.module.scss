@@ -1,0 +1,61 @@
+@import "../../../../styles/var";
+
+.updateName {
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .inputWrapper {
+    position: relative;
+
+    .input {
+      width: 100%;
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+			color: $secondary-color;
+
+      &:focus {
+        border-color: #3df1e0;
+        box-shadow: 0 0 5px rgba(61, 241, 224, 0.5);
+      }
+    }
+  }
+
+		button {
+			background-color: $secondary-background;
+			color: $primary-color;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+
+			&:hover, &.active {
+				background-color: lighten($secondary-background, 15%);
+			}
+		}
+
+  .error {
+    color: #ff4d4d;
+    font-size: 14px;
+  }
+
+  .success {
+    color: #3df1e0;
+    font-size: 14px;
+  }
+}

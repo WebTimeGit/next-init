@@ -1,0 +1,40 @@
+@import "../../styles/var";
+
+.account {
+	display: grid;
+	grid-template-columns: 1fr;
+	padding: 25px 10px;
+	width: 100%;
+	gap: 20px;
+
+	@include lg {
+		grid-template-columns: 1fr 4fr;
+	}
+
+	.btns {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+
+		button {
+			background-color: $secondary-background;
+			color: $primary-color;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+
+			&:hover, &.active {
+				background-color: lighten($secondary-background, 15%);
+			}
+		}
+	}
+}
+
+.bodyWrapper {
+	display: flex;
+	gap: 20px;
+}
